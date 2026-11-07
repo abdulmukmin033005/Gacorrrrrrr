@@ -1,0 +1,302 @@
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Barterin - Platform Pertukaran Barang</title>
+        <link rel="stylesheet" href="./output.css">
+        <script src="./script.js" defer></script>
+    </head>
+    <body class="m-0 bg-white font-sans leading-relaxed text-slate-800">
+
+        <!-- NAVBAR -->
+        <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+            <nav class="mx-auto flex min-h-18 w-[92%] max-w-295 items-center justify-between gap-6">
+                <a href="#beranda" class="text-2xl font-extrabold">
+                    <span class="mr-1 inline-grid h-8.5 w-8.5 place-items-center rounded-lg bg-blue-700 text-white">↔</span>
+                    Barter<span class="text-blue-700">in</span>
+                </a>
+
+                <button id="menu-toggle" class="hidden rounded-lg border border-slate-200 px-3 py-2 text-xl max-[700px]:block" aria-label="Buka menu" aria-expanded="false">
+                    ☰
+                </button>
+
+                <ul id="nav-menu" class="flex list-none gap-7 text-sm font-semibold text-slate-600 max-[700px]:absolute max-[700px]:left-0 max-[700px]:top-18 max-[700px]:hidden max-[700px]:w-full max-[700px]:flex-col max-[700px]:gap-0 max-[700px]:border-b max-[700px]:border-slate-200 max-[700px]:bg-white max-[700px]:p-4">
+                    <li><a class="block py-2 hover:text-blue-700" href="#beranda">Beranda</a></li>
+                    <li><a class="block py-2 hover:text-blue-700" href="#barang">Jelajahi</a></li>
+                    <li><a class="block py-2 hover:text-blue-700" href="#cara">Cara Kerja</a></li>
+                    <li><a class="block py-2 hover:text-blue-700" href="#tambah">Tambah Barang</a></li>
+                </ul>
+
+                <div class="flex items-center gap-3 max-[700px]:hidden">
+                    <button id="favorite-nav" class="text-2xl" aria-label="Lihat favorit">♡</button>
+                    <button class="relative text-2xl" aria-label="Notifikasi">
+                        ♢ <span class="absolute right-0 top-0 h-2 w-2 rounded-full bg-red-500"></span>
+                    </button>
+                    <button id="login-button" class="rounded-lg bg-blue-700 px-4 py-2.5 text-sm font-bold text-white hover:bg-blue-800">Masuk</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- HERO -->
+            <section id="beranda" class="bg-linear-to-br from-blue-50 to-white py-20 max-md:py-12">
+                    <div class="mx-auto grid w-[92%] max-w-295 grid-cols-2 items-center gap-12 max-[1000px]:grid-cols-1">
+                    <div class="max-[1000px]:text-center">
+                        <span class="font-extrabold tracking-wide text-blue-700">✦ CARA BARU UNTUK BERTUKAR BARANG</span>
+                        <h1 class="my-4 text-5xl font-extrabold leading-tight tracking-tight max-md:text-4xl">
+                            Barangmu punya nilai.
+                            <span class="block text-blue-700">Tukarkan dengan yang kamu mau.</span>
+                        </h1>
+                        <p class="max-w-xl text-lg text-slate-500 max-[1000px]:mx-auto">
+                            Temukan barang yang kamu butuhkan, tawarkan barang yang kamu miliki, dan lakukan pertukaran dengan mudah, aman, dan nyaman.
+                        </p>
+                        <div class="mt-7 flex flex-wrap gap-3 max-[1000px]:justify-center">
+                            <a href="#barang" class="rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800">Jelajahi Barang →</a>
+                            <a href="#tambah" class="rounded-xl border border-slate-300 bg-white px-5 py-3 font-bold hover:bg-slate-50">+ Tambahkan Barang</a>
+                        </div>
+                        <div class="mt-7 flex items-center gap-4 max-[1000px]:justify-center">
+                            <div class="flex">
+                                <span class="-mr-2 grid h-8 w-8 place-items-center rounded-full border-2 border-white bg-blue-100 font-bold">A</span>
+                                <span class="-mr-2 grid h-8 w-8 place-items-center rounded-full border-2 border-white bg-purple-100 font-bold">B</span>
+                                <span class="-mr-2 grid h-8 w-8 place-items-center rounded-full border-2 border-white bg-orange-100 font-bold">C</span>
+                                <span class="grid h-8 w-8 place-items-center rounded-full border-2 border-white bg-green-100 font-bold">D</span>
+                            </div>
+                            <div>
+                                <strong class="block">1.200+ pengguna</strong>
+                                <small class="text-slate-500">telah bergabung</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative grid min-h-105 place-items-center max-md:min-h-87.5">
+                        <div class="absolute left-0 top-8 flex items-center gap-3 rounded-xl bg-white p-4 shadow-xl">
+                            <span class="grid h-11 w-11 place-items-center rounded-xl bg-blue-50 text-2xl">🎒</span>
+                            <div><strong class="block">Tas Kuliah</strong><small class="text-slate-500">Barter tersedia</small></div>
+                            <span class="h-2 w-2 rounded-full bg-green-500"></span>
+                        </div>
+
+                        <div class="w-[min(390px,90%)] rounded-3xl bg-white p-8 text-center shadow-2xl">
+                            <div class="py-6 text-8xl">👟</div>
+                            <div class="flex justify-between gap-4 text-left">
+                                <div>
+                                    <span class="text-xs font-extrabold text-blue-700">FASHION</span>
+                                    <h3 class="font-bold">Sneakers Premium</h3>
+                                    <p class="text-sm text-slate-500">Kondisi sangat baik</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-sm text-slate-500">Ingin ditukar</span>
+                                    <strong class="block">Barang lain</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-8 right-0 flex items-center gap-3 rounded-xl bg-white p-4 shadow-xl">
+                            <span class="grid h-11 w-11 place-items-center rounded-xl bg-green-50 text-2xl">✓</span>
+                            <div><strong class="block">Barter berhasil!</strong><small class="text-slate-500">2 menit yang lalu</small></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATISTIK -->
+            <section class="border-y border-slate-100 py-7">
+                <div class="mx-auto grid w-[92%] max-w-295 grid-cols-4 gap-5 text-center max-md:grid-cols-2">
+                    <div><strong class="block text-3xl">1.200+</strong><span class="text-sm text-slate-500">Pengguna Aktif</span></div>
+                    <div><strong class="block text-3xl">3.500+</strong><span class="text-sm text-slate-500">Barang Ditawarkan</span></div>
+                    <div><strong class="block text-3xl">850+</strong><span class="text-sm text-slate-500">Barter Berhasil</span></div>
+                    <div><strong class="block text-3xl">4.9/5</strong><span class="text-sm text-slate-500">Rating Pengguna</span></div>
+                </div>
+            </section>
+
+            <!-- JELAJAHI BARANG -->
+            <section id="barang" class="py-20">
+                <div class="mx-auto w-[92%] max-w-295">
+                    <div class="mb-8 flex items-end justify-between gap-6 max-md:block">
+                        <div>
+                            <span class="text-xs font-extrabold tracking-wide text-blue-700">JELAJAHI BARANG</span>
+                            <h2 class="mt-2 text-4xl font-bold max-md:text-3xl">Temukan barang yang kamu cari</h2>
+                            <p class="mt-2 text-slate-500">Pilih dari berbagai barang yang ditawarkan oleh pengguna di sekitarmu.</p>
+                        </div>
+                        <a href="#barang" class="font-bold text-blue-700">Lihat semua →</a>
+                    </div>
+
+                    <form id="search-form" class="grid grid-cols-[1.7fr_1fr_1fr_auto] gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 max-[800px]:grid-cols-1">
+                        <input id="search-input" type="search" placeholder="Cari barang yang kamu inginkan..." class="min-w-0 rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-blue-600">
+                        <select id="category-filter" class="rounded-lg border border-slate-200 bg-white px-3 py-3">
+                            <option value="">Semua Kategori</option>
+                            <option>Elektronik</option>
+                            <option>Fashion</option>
+                            <option>Olahraga</option>
+                            <option>Buku</option>
+                            <option>Hobi</option>
+                        </select>
+                        <select id="location-filter" class="rounded-lg border border-slate-200 bg-white px-3 py-3">
+                            <option value="">Semua Lokasi</option>
+                            <option>Malang</option>
+                            <option>Bandung</option>
+                            <option>Surabaya</option>
+                            <option>Jakarta</option>
+                        </select>
+                        <button class="rounded-lg bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800">Cari Barang</button>
+                    </form>
+
+                    <div id="categories" class="my-5 flex gap-2 overflow-x-auto pb-2">
+                        <button data-category="" class="category-button shrink-0 rounded-full border border-blue-700 bg-blue-700 px-4 py-2 text-white">✦ Semua</button>
+                        <button data-category="Elektronik" class="category-button shrink-0 rounded-full border border-slate-200 px-4 py-2 hover:border-blue-700">💻 Elektronik</button>
+                        <button data-category="Fashion" class="category-button shrink-0 rounded-full border border-slate-200 px-4 py-2 hover:border-blue-700">👕 Fashion</button>
+                        <button data-category="Olahraga" class="category-button shrink-0 rounded-full border border-slate-200 px-4 py-2 hover:border-blue-700">⚽ Olahraga</button>
+                        <button data-category="Buku" class="category-button shrink-0 rounded-full border border-slate-200 px-4 py-2 hover:border-blue-700">📚 Buku</button>
+                        <button data-category="Hobi" class="category-button shrink-0 rounded-full border border-slate-200 px-4 py-2 hover:border-blue-700">🎮 Hobi</button>
+                    </div>
+
+                    <p id="search-result" class="mb-4 text-sm font-semibold text-slate-500" aria-live="polite"></p>
+
+                    <div id="product-grid" class="grid grid-cols-4 gap-5 max-[1000px]:grid-cols-2 max-md:grid-cols-1">
+                        <!-- Kartu produk diisi oleh JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- CARA KERJA -->
+            <section id="cara" class="bg-slate-50 py-20">
+                <div class="mx-auto w-[92%] max-w-295">
+                    <div class="mb-10 text-center">
+                        <span class="text-xs font-extrabold tracking-wide text-blue-700">CARA KERJA</span>
+                        <h2 class="mt-2 text-4xl font-bold max-md:text-3xl">Barter jadi lebih mudah</h2>
+                        <p class="mx-auto mt-3 max-w-xl text-slate-500">Hanya perlu beberapa langkah untuk mendapatkan barang yang kamu inginkan.</p>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-5 max-[1000px]:grid-cols-2 max-md:grid-cols-1">
+                        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+                            <div class="text-3xl">📸</div><span class="mt-3 block text-xs font-extrabold text-blue-700">01</span>
+                            <h3 class="my-2 text-lg font-bold">Tambahkan Barang</h3>
+                            <p class="text-sm text-slate-500">Tawarkan barang yang ingin kamu tukarkan lengkap dengan kondisi dan deskripsi.</p>
+                        </article>
+                        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+                            <div class="text-3xl">🔎</div><span class="mt-3 block text-xs font-extrabold text-blue-700">02</span>
+                            <h3 class="my-2 text-lg font-bold">Cari Barang</h3>
+                            <p class="text-sm text-slate-500">Gunakan pencarian dan filter untuk menemukan barang yang sesuai kebutuhanmu.</p>
+                        </article>
+                        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+                            <div class="text-3xl">💬</div><span class="mt-3 block text-xs font-extrabold text-blue-700">03</span>
+                            <h3 class="my-2 text-lg font-bold">Negosiasi & Barter</h3>
+                            <p class="text-sm text-slate-500">Ajukan barter dan diskusikan kesepakatan dengan pemilik barang.</p>
+                        </article>
+                        <article class="rounded-2xl border border-slate-200 bg-white p-6">
+                            <div class="text-3xl">🤝</div><span class="mt-3 block text-xs font-extrabold text-blue-700">04</span>
+                            <h3 class="my-2 text-lg font-bold">Selesaikan Barter</h3>
+                            <p class="text-sm text-slate-500">Tentukan tempat dan waktu, kemudian lakukan pertukaran.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAMBAH BARANG -->
+            <section id="tambah" class="py-20">
+                <div class="mx-auto grid w-[92%] max-w-295 grid-cols-[0.8fr_1.2fr] gap-10 rounded-3xl bg-blue-50 p-10 max-[800px]:grid-cols-1 max-md:p-6">
+                    <div>
+                        <span class="text-xs font-extrabold tracking-wide text-blue-700">PUNYA BARANG?</span>
+                        <h2 class="my-3 text-4xl font-bold leading-tight max-md:text-3xl">Jangan biarkan barangmu menganggur.</h2>
+                        <p class="text-slate-500">Tambahkan barang yang sudah tidak kamu gunakan dan temukan orang yang membutuhkannya.</p>
+                        <div class="mt-6 grid gap-2 font-semibold">
+                            <span>✓ Gratis untuk digunakan</span>
+                            <span>✓ Mudah menemukan barter</span>
+                            <span>✓ Bertemu pengguna sekitar</span>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white p-8 shadow-lg max-md:p-5">
+                        <h3 class="text-2xl font-bold">Tambahkan Barang</h3>
+                        <p class="mb-5 text-slate-500">Isi informasi barang yang ingin kamu tawarkan.</p>
+                        <form id="add-form" class="grid gap-2">
+                            <label for="item-name" class="mt-2 text-sm font-bold">Nama Barang</label>
+                            <input id="item-name" required maxlength="80" placeholder="Contoh: Sepatu Nike" class="rounded-lg border border-slate-200 px-3 py-3 outline-none focus:border-blue-700">
+
+                            <label for="item-category" class="mt-2 text-sm font-bold">Kategori</label>
+                            <select id="item-category" required class="rounded-lg border border-slate-200 bg-white px-3 py-3">
+                                <option value="">Pilih kategori</option>
+                                <option>Elektronik</option><option>Fashion</option><option>Olahraga</option><option>Buku</option><option>Hobi</option>
+                            </select>
+
+                            <label for="item-condition" class="mt-2 text-sm font-bold">Kondisi Barang</label>
+                            <select id="item-condition" required class="rounded-lg border border-slate-200 bg-white px-3 py-3">
+                                <option value="">Pilih kondisi</option>
+                                <option>Baru</option><option>Sangat Baik</option><option>Baik</option><option>Cukup</option>
+                            </select>
+
+                            <label for="item-location" class="mt-2 text-sm font-bold">Lokasi</label>
+                            <select id="item-location" required class="rounded-lg border border-slate-200 bg-white px-3 py-3">
+                                <option value="">Pilih lokasi</option>
+                                <option>Malang</option><option>Bandung</option><option>Surabaya</option><option>Jakarta</option>
+                            </select>
+
+                            <label for="item-description" class="mt-2 text-sm font-bold">Deskripsi</label>
+                            <textarea id="item-description" required maxlength="300" rows="3" placeholder="Jelaskan kondisi barang..." class="rounded-lg border border-slate-200 px-3 py-3 outline-none focus:border-blue-700"></textarea>
+
+                            <label for="item-wanted" class="mt-2 text-sm font-bold">Barang yang Kamu Inginkan</label>
+                            <input id="item-wanted" required maxlength="80" placeholder="Contoh: Tas, sepatu, laptop..." class="rounded-lg border border-slate-200 px-3 py-3 outline-none focus:border-blue-700">
+
+                            <button type="submit" class="mt-3 rounded-xl bg-blue-700 px-5 py-3 font-bold text-white hover:bg-blue-800">Publikasikan Barang →</button>
+                            <p id="form-message" class="text-sm" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-900 py-12 text-white">
+            <div class="mx-auto grid w-[92%] max-w-295 grid-cols-[2fr_1fr_1fr_1.3fr] gap-8 max-[800px]:grid-cols-2 max-md:grid-cols-1">
+                <div>
+                    <a href="#beranda" class="text-2xl font-extrabold">↔ Barter<span class="text-blue-400">in</span></a>
+                    <p class="mt-3 text-sm text-slate-400">Platform pertukaran barang yang membantu kamu menemukan barang yang dibutuhkan tanpa harus selalu membeli baru.</p>
+                    <div class="mt-4 flex gap-3"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="X">𝕏</a></div>
+                </div>
+                <div class="grid content-start gap-2">
+                    <h4 class="font-bold">Jelajahi</h4>
+                    <a class="text-sm text-slate-400 hover:text-white" href="#barang">Semua Barang</a>
+                    <a class="text-sm text-slate-400 hover:text-white" href="#barang">Elektronik</a>
+                    <a class="text-sm text-slate-400 hover:text-white" href="#barang">Fashion</a>
+                    <a class="text-sm text-slate-400 hover:text-white" href="#barang">Olahraga</a>
+                </div>
+                <div class="grid content-start gap-2">
+                    <h4 class="font-bold">Barterin</h4>
+                    <a class="text-sm text-slate-400 hover:text-white" href="#cara">Cara Kerja</a>
+                    <a class="text-sm text-slate-400 hover:text-white" href="#tambah">Tambah Barang</a>
+                    <a class="text-sm text-slate-400 hover:text-white" href="#tambah">Keamanan</a>
+                    <a class="text-sm text-slate-400 hover:text-white" href="#tambah">Bantuan</a>
+                </div>
+                <div class="grid content-start gap-2">
+                    <h4 class="font-bold">Hubungi Kami</h4>
+                    <p class="text-sm text-slate-400">📍 Malang, Jawa Timur</p>
+                    <p class="text-sm text-slate-400">✉ hello@barterin.id</p>
+                    <p class="text-sm text-slate-400">☎ +62 812 3456 7890</p>
+                </div>
+            </div>
+            <div class="mx-auto mt-8 flex w-[92%] max-w-295 justify-between gap-5 border-t border-slate-700 pt-5 text-xs text-slate-400 max-md:flex-col">
+                <p>© 2026 Barterin. Semua hak dilindungi.</p>
+                <div class="flex gap-4"><a href="#">Kebijakan Privasi</a><a href="#">Syarat & Ketentuan</a></div>
+            </div>
+        </footer>
+
+        <!-- MODAL BARTER -->
+        <div id="barter-modal" class="fixed inset-0 z-100 hidden items-center justify-center bg-slate-950/60 p-5" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="relative w-full max-w-lg rounded-2xl bg-white p-8 shadow-2xl">
+                <button id="modal-close" class="absolute right-4 top-3 text-3xl" aria-label="Tutup modal">×</button>
+                <div class="mb-4 grid h-14 w-14 place-items-center rounded-full bg-green-100 text-3xl text-green-700">✓</div>
+                <h2 id="modal-title" class="text-2xl font-bold">Ajukan Barter</h2>
+                <p id="modal-product" class="my-2 text-slate-500"></p>
+                <form id="barter-form" class="mt-5 grid gap-3">
+                    <label for="barter-name" class="font-semibold">Nama kamu</label>
+                    <input id="barter-name" required class="rounded-lg border border-slate-300 px-3 py-3" placeholder="Masukkan nama">
+                    <label for="barter-offer" class="font-semibold">Barang yang ditawarkan</label>
+                    <textarea id="barter-offer" required rows="3" class="rounded-lg border border-slate-300 px-3 py-3" placeholder="Jelaskan barang yang ingin kamu tukarkan"></textarea>
+                    <button class="rounded-lg bg-blue-700 px-4 py-3 font-bold text-white hover:bg-blue-800">Kirim Pengajuan</button>
+                    <p id="barter-message" class="text-sm" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+
+    </body>
+    </html>

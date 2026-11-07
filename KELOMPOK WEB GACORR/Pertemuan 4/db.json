@@ -1,0 +1,25 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "Adha Muddin",
+      "username": "adha_muddin",
+      "email": "adha@gmail.com",
+      "role": "Admin"
+    },
+    {
+      "id": 2,
+      "name": "Abdul Mukmin",
+      "username": "abdul_mukmin",
+      "email": "abdul@gmail.com",
+      "role": "Admin"
+    },
+    {
+      "id": 3,
+      "name": "Muhammad Nazril Irham",
+      "username": "nazril_irham",
+      "email": "nazril@gmail.com",
+      "role": "Admin"
+    }
+  ]
+}

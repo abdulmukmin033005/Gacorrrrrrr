@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barterin | Pertemuan 5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav container">
+        <div class="brand">
+          <span class="brand-icon">↔</span>
+          <span>Barter<span class="brand-accent">in</span></span>
+        </div>
+
+        <div class="nav-links">
+          <a href="#beranda">Beranda</a>
+          <a href="#barang">Barang</a>
+          <a href="#tambah">Tambah</a>
+        </div>
+
+        <button class="nav-button">Masuk</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="beranda" class="hero">
+        <div class="container hero-wrap">
+          <div class="hero-copy">
+            <p class="eyebrow">CARA BARU UNTUK BERTUKAR BARANG</p>
+            <h1>Barangmu punya nilai. <span>Tukarkan dengan yang kamu mau.</span></h1>
+            <p class="lead">
+              Temukan barang yang kamu butuhkan, tawarkan barang yang kamu miliki,
+              dan lakukan pertukaran dengan mudah dan aman.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#barang" class="primary-btn">Jelajahi Barang</a>
+              <a href="#tambah" class="secondary-btn">Tambah Barang</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="mini-card mini-card-top">
+              <div class="mini-icon">🎒</div>
+              <div>
+                <strong>Tas Kuliah</strong>
+                <small>Barter tersedia</small>
+              </div>
+            </div>
+
+            <div class="showcase">
+              <div class="showcase-icon">👟</div>
+              <div class="showcase-info">
+                <span>FASHION</span>
+                <h3>Sneakers Premium</h3>
+                <p>Kondisi sangat baik</p>
+              </div>
+            </div>
+
+            <div class="mini-card mini-card-bottom">
+              <div class="mini-icon success">✓</div>
+              <div>
+                <strong>Barter berhasil!</strong>
+                <small>2 menit yang lalu</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="barang" class="catalog section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">JELAJAHI BARANG</p>
+              <h2>Temukan barang yang kamu cari</h2>
+            </div>
+            <a href="#tambah">Tambah item baru</a>
+          </div>
+
+          <div class="filters">
+            <input id="searchInput" type="search" placeholder="Cari barang..." />
+            <select id="categoryFilter">
+              <option value="">Semua Kategori</option>
+              <option value="Elektronik">Elektronik</option>
+              <option value="Fashion">Fashion</option>
+              <option value="Olahraga">Olahraga</option>
+              <option value="Buku">Buku</option>
+              <option value="Hobi">Hobi</option>
+            </select>
+            <select id="locationFilter">
+              <option value="">Semua Lokasi</option>
+              <option value="Malang">Malang</option>
+              <option value="Bandung">Bandung</option>
+              <option value="Surabaya">Surabaya</option>
+              <option value="Jakarta">Jakarta</option>
+            </select>
+          </div>
+
+          <div id="resultInfo" class="result-info">Menampilkan 0 barang</div>
+          <div id="productGrid" class="product-grid"></div>
+        </div>
+      </section>
+
+      <section id="tambah" class="form-section section">
+        <div class="container form-wrap">
+          <div class="form-intro">
+            <p class="eyebrow">PUNYA BARANG?</p>
+            <h2>Jangan biarkan barangmu menganggur.</h2>
+            <p>
+              Tambahkan barang yang ingin kamu tukarkan dan temukan orang yang
+              membutuhkannya.
+            </p>
+          </div>
+
+          <form id="barangForm" class="barang-form">
+            <div class="field">
+              <label for="namaBarang">Nama Barang</label>
+              <input id="namaBarang" name="namaBarang" type="text" placeholder="Contoh: Sepatu Nike" required />
+            </div>
+
+            <div class="field">
+              <label for="kategori">Kategori</label>
+              <select id="kategori" name="kategori" required>
+                <option value="">Pilih kategori</option>
+                <option value="Elektronik">Elektronik</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Olahraga">Olahraga</option>
+                <option value="Buku">Buku</option>
+                <option value="Hobi">Hobi</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="kondisi">Kondisi</label>
+              <input id="kondisi" name="kondisi" type="text" placeholder="Contoh: Sangat Baik" required />
+            </div>
+
+            <div class="field">
+              <label for="lokasi">Lokasi</label>
+              <select id="lokasi" name="lokasi" required>
+                <option value="">Pilih lokasi</option>
+                <option value="Malang">Malang</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Surabaya">Surabaya</option>
+                <option value="Jakarta">Jakarta</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="deskripsi">Deskripsi</label>
+              <textarea id="deskripsi" name="deskripsi" rows="3" placeholder="Jelaskan kondisi barang..." required></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="tawaran">Barang yang Diinginkan</label>
+              <input id="tawaran" name="tawaran" type="text" placeholder="Contoh: Laptop, Tas, atau Sepatu" required />
+            </div>
+
+            <button type="submit" class="primary-btn submit-btn">Tambah Barang</button>
+            <p id="formMessage" class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

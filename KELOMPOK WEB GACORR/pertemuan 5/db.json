@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Nike Air Sneakers",
+    "category": "Fashion",
+    "condition": "Sangat Baik",
+    "description": "Sepatu original, jarang dipakai dan masih terlihat baru.",
+    "location": "Malang",
+    "rating": "4.9",
+    "owner": "Andi",
+    "avatar": "A",
+    "time": "2 jam lalu",
+    "icon": "👟",
+    "color": "#dbeafe",
+    "wanted": "Tas atau laptop"
+  },
+  {
+    "id": 2,
+    "name": "Laptop ASUS",
+    "category": "Elektronik",
+    "condition": "Baik",
+    "description": "Laptop untuk mahasiswa dan pekerjaan ringan, kondisi masih bagus.",
+    "location": "Bandung",
+    "rating": "4.8",
+    "owner": "Budi",
+    "avatar": "B",
+    "time": "4 jam lalu",
+    "icon": "💻",
+    "color": "#ede9fe",
+    "wanted": "Smartphone"
+  },
+  {
+    "id": 3,
+    "name": "Tas Kuliah",
+    "category": "Fashion",
+    "condition": "Baik",
+    "description": "Tas dengan kapasitas besar, cocok untuk kebutuhan harian.",
+    "location": "Surabaya",
+    "rating": "4.7",
+    "owner": "Citra",
+    "avatar": "C",
+    "time": "1 hari lalu",
+    "icon": "🎒",
+    "color": "#ffedd5",
+    "wanted": "Sepatu"
+  },
+  {
+    "id": 4,
+    "name": "Controller PS5",
+    "category": "Hobi",
+    "condition": "Sangat Baik",
+    "description": "Controller masih berfungsi dengan baik dan sering digunakan.",
+    "location": "Jakarta",
+    "rating": "5.0",
+    "owner": "Dimas",
+    "avatar": "D",
+    "time": "2 hari lalu",
+    "icon": "🎮",
+    "color": "#dcfce7",
+    "wanted": "Headset gaming"
+  }
+]
